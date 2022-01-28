@@ -17,6 +17,38 @@ class queue:
 			print(temp.value)
 			temp = temp.next
 		print("-----")
+	
+	def enqueue(self,value):
+		new_node = Node(value)
+		if self.length == 0:
+			self.first = new_node
+			self.last = new_node
+		else:
+			self.last.next = new_node
+			self.last = new_node
+		
+		self.length += 1
+
+		return True
+	
+	def dequeue(self):
+		if self.length == 0:
+			return None
+		
+		temp = self.first
+		if self.length == 1:
+			self.first = None
+			self.last = None
+		else:
+			self.first = temp.next
+			temp.next = None
+
+		self.length -= 1
+
+		return temp
+
 
 q = queue(4)
+q.enqueue(5)
+q.dequeue()
 q.print()
