@@ -163,7 +163,6 @@ class LinkedList:
 
 
 
-
 myll = LinkedList(4)
 myll.append(5)
 myll.prepend(7)
