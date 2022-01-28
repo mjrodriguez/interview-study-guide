@@ -1,6 +1,11 @@
 #pragma once
 #include <iostream>
+#include <vector>
 
+struct Node{
+	int data;
+	Node* p_next;
+};
 class Stack{
 public:
 	Stack();
@@ -9,10 +14,6 @@ public:
 	int peek();
 	bool isEmpty();
 private:
-	struct Node{
-		int data;
-		Node* p_next;
-	};
 	Node* p_head;
 	int height;
 };
@@ -48,3 +49,42 @@ void Stack::pop(){
 int Stack::peek(){
 	return p_head->data;
 }
+
+
+
+class StackArray {
+public:
+	StackArray();
+	void push(const int val);
+	void pop();
+	int peek();
+	bool isEmpty();
+
+private:
+	std::vector<int> data;
+	int height;
+};
+
+
+StackArray::StackArray(){
+	height = 0;
+}
+
+void StackArray::push(const int val) {
+	data.push_back(val);
+	height++;
+}
+
+void StackArray::pop() {
+	data.pop_back();
+	height--;
+}
+
+int StackArray::peek() {
+	return data[height-1];
+}
+
+bool StackArray::isEmpty() {
+	return data.size() == 0;
+}
+

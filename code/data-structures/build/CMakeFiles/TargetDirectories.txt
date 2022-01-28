@@ -1,0 +1,3 @@
+/home/martinrodriguez/Research/interview-study-guide/code/data-structures/build/CMakeFiles/rebuild_cache.dir
+/home/martinrodriguez/Research/interview-study-guide/code/data-structures/build/CMakeFiles/edit_cache.dir
+/home/martinrodriguez/Research/interview-study-guide/code/data-structures/build/CMakeFiles/DSA.dir

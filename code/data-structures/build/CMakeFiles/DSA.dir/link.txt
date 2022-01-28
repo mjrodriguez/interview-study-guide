@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/DSA.dir/impl/main.o  -o DSA 

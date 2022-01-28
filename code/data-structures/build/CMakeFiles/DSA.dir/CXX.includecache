@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../Queue.hpp
+iostream
+-
+
+../SimpleLinkedList.hpp
+iostream
+-
+
+../Stack.hpp
+iostream
+-
+vector
+-
+
+/home/martinrodriguez/Research/interview-study-guide/code/data-structures/impl/main.cpp
+iostream
+-
+SimpleLinkedList.hpp
+/home/martinrodriguez/Research/interview-study-guide/code/data-structures/impl/SimpleLinkedList.hpp
+Stack.hpp
+/home/martinrodriguez/Research/interview-study-guide/code/data-structures/impl/Stack.hpp
+Queue.hpp
+/home/martinrodriguez/Research/interview-study-guide/code/data-structures/impl/Queue.hpp
+

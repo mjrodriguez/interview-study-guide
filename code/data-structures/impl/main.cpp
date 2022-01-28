@@ -2,6 +2,7 @@
 // #include "LinkedList.hpp"
 #include "SimpleLinkedList.hpp"
 #include "Stack.hpp"
+#include "Queue.hpp"
 
 int main(){
     
@@ -23,6 +24,29 @@ int main(){
     s.pop();
     top = s.peek();
     std::cout << top << std::endl;
+
+    std::cout << "---------------- Stack Array ---------------" << std::endl;
+    StackArray sa;
+    sa.push(10);
+    sa.push(5);
+
+    top = sa.peek();
+    sa.pop();
+    top = sa.peek();
+    std::cout << top << std::endl;
+
+    std::cout << "---------------- Queue ---------------" << std::endl;
+    Queue Q;
+    Q.enqueue(10);
+    Q.enqueue(5);
+    Q.enqueue(4);
+    int first = Q.peek();
+    std::cout << "First = " << first << std::endl;
+    Q.dequeue();
+    std::cout << "Dequeue..." << std::endl;
+    first = Q.peek();
+    std::cout << first << std::endl;
+
     // LinkedList<double> nums;
     // nums.insert(10.0);
     // nums.insert(100.0);
