@@ -70,11 +70,34 @@ def merge_sort(input_list):
 	mid = int(len(input_list)/2)
 	left = input_list[:mid]
 	right = input_list[mid:]
-	return 0
+	return merge(merge_sort(left),merge_sort(right))
 
+def swap(list1, index1, index2):
+	temp = list1[index1]
+	list1[index1] = list1[index2]
+	list1[index2] = temp
 
+def pivot(list1, pivot_index, end_index):
+	swap_index = pivot_index
 
+	for i in range(pivot_index+1, end_index+1):
+		if list1[i] < list1[pivot_index]:
+			swap_index += 1
+			swap(list1, swap_index, i)
+		
+	
+	swap(list1, pivot_index, swap_index)
+	return swap_index
 
+def quick_sort_alg(list1, left, right):
+	if left < right:
+		pivot_index = pivot(list1, left, right)
+		quick_sort_alg(list1,left, pivot_index-1)
+		quick_sort_alg(list1,pivot_index+1,right)
+	return list1
+
+def quick_sort(list1):
+	return quick_sort_alg(list1, 0, len(list1)-1)
 input = [4,2,6,5,1,3]
 
 print("Input: ", input)
@@ -82,4 +105,11 @@ print("Input: ", input)
 # print("Output:", selection_sort(input))
 print("Output:", insertion_sort(input))
 
-print(merge([1,2,7,8],[3,4,5,6]))
+# print(merge([1,2,7,8],[3,4,5,6]))
+
+print(merge_sort([3,1,4,2]))
+
+l = [4, 6, 1, 7, 3, 2, 5]
+
+print(l)
+print(quick_sort(l))
