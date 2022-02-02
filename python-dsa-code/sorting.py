@@ -65,7 +65,13 @@ def merge(list1, list2):
 	return combined
 
 def merge_sort(input_list):
+	if len(input_list) == 1:
+		return input_list
+	mid = int(len(input_list)/2)
+	left = input_list[:mid]
+	right = input_list[mid:]
 	return 0
+
 
 
 
